@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Coffee</title>
+  <meta name="description" content="A brief look at coffee in all its sensory splendor." />
+  <meta name="author" content="Mark Read" />
+  <style>
+    :root {
+      --bg: #f4f4f4;
+      --card: #ffffff;
+      --ink: #212121;
+      --muted: #5f5f5f;
+      --brown: #783f04;
+      --brown-hover: #5c3003;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.6;
+    }
+    .wrap { max-width: 860px; margin: 0 auto; padding: 28px 16px 64px; }
+    header.site { padding: 8px 4px 18px; }
+    header.site .kicker {
+      font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--brown); font-weight: 700;
+    }
+    header.site h1 { margin: 6px 0 4px; font-size: 1.7rem; }
+    header.site p.tag { margin: 0; color: var(--muted); font-size: 0.95rem; }
+    .card {
+      background: var(--card);
+      box-shadow: 0 1px 3px rgba(0,0,0,.12);
+      padding: 28px 28px 36px;
+      overflow-x: auto;
+    }
+    nav.topbar { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 22px; }
+    nav.topbar a {
+      font-size: 0.78rem; color: var(--brown); text-decoration: none;
+      border: 1px solid var(--brown); padding: 5px 10px; background: #fff;
+    }
+    nav.topbar a:hover { background: #f7efe6; }
+    nav.topbar a.active { background: var(--brown); color: #fff; }
+    section.page { display: none; }
+    section.page.active { display: block; }
+    section.page table { border-collapse: collapse; margin: 12px 0 20px; width: 100%; }
+    section.page td, section.page th {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      padding: 6px 8px;
+      vertical-align: top;
+      border-bottom: 1px solid #eee;
+    }
+    section.page .menu-table td { border-bottom: 0; }
+    .page-nav { margin-top: 24px; padding-top: 14px; border-top: 1px dashed rgba(0,0,0,.2); font-size: 0.9rem; }
+    .page-nav a { color: var(--brown); }
+    footer { text-align: center; color: #8a8a8a; font-size: 0.82rem; margin-top: 28px; }
+    @media (max-width: 520px) { .card { padding: 20px 14px 28px; } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="site">
+      <div class="kicker">About Coffee</div>
+      <h1 id="site-heading">Coffee Menu</h1>
+      <p class="tag">A brief look at coffee in all its sensory splendor :)</p>
+    </header>
+    <div class="card">
+      <nav class="topbar" id="topnav" aria-label="Site sections">
+        <a href="#menu" data-page="menu">Menu</a>
+        <a href="#overview" data-page="overview">Overview</a>
+        <a href="#questions" data-page="questions">Top questions</a>
+        <a href="#types" data-page="types">Coffee types</a>
+        <a href="#mandalay" data-page="mandalay">Mandalay coffee</a>
+      </nav>
+
+      <section id="menu" class="page active" data-title="Coffee Menu">
+<p><span style="font-family: verdana;">Visit the various pages below for more information on coffee.</span></p>
+
+<table border="2" color="white">
+  <tbody>
+    <tr>
+      <td style="font-family: verdana; background-color: #783f04; padding: 10px;"><a href="#questions" style="color: white; text-decoration: none;">Top questions &gt;&gt;</a></td>
+    </tr>
+    <tr>
+      <td style="font-family: verdana; background-color: #783f04; padding: 10px;"><a href="#overview" style="color: white; text-decoration: none;">Coffee - a quick overview &gt;&gt;</a></td>
+    </tr>
+    <tr>
+      <td style="font-family: verdana; background-color: #783f04; padding: 10px;"><a href="#types" style="color: white; text-decoration: none;">Coffee types &gt;&gt;</a></td>
+    </tr>
+    <tr>
+      <td style="font-family: verdana; background-color: #783f04; padding: 10px;"><a href="#mandalay" style="color: white; text-decoration: none;">Mandalay coffee &gt;&gt;</a></td>
+    </tr>
+  </tbody>
+</table>
+        <p class="page-nav"><a href="#questions">Top questions &gt;&gt;</a></p>
+      </section>
+
+      <section id="overview" class="page" data-title="Coffee - a quick overview">
+<p><span style="font-family: verdana;"><span color="rgba(0, 0, 0, 0.8)" style="font-weight: 700;">Coffee</span><span color="rgba(0, 0, 0, 0.8)" style="background-color: white;">&nbsp;</span><span color="rgba(0, 0, 0, 0.8)" style="background-color: white;">is a popular beverage brewed from the roasted and ground seeds of the coffee plant. It has a rich history and cultural significance, being adored by many around the world. Here are some key points about coffee:</span></span></p>
+
+<ul>
+  <li><strong>Origins:</strong> Coffee is believed to have originated in Ethiopia and has since spread globally, becoming one of the most profitable international commodities.</li>
+  <li><strong>Types:</strong> There are various types of coffee, including espresso, cappuccino, and cold brew, each with unique flavors and brewing methods.</li>
+  <li><strong>Brewing Methods:</strong> Common brewing methods include drip brewing, French press, and espresso machines, each affecting the flavor and strength of the coffee.</li>
+  <li><strong>Health Benefits:</strong> Research indicates that coffee may have health benefits, including improved cognitive function and a lower risk of certain diseases, although moderation is key.</li>
+  <li><strong>Caffeine Content:</strong> Coffee contains caffeine, a natural stimulant that can enhance alertness and energy levels.</li>
+</ul>
+<p>For more detailed information, you can explore the sources: National Coffee Association, Britannica, and The Coffee Bump.</p>
+
+        <p class="page-nav"><a href="#menu">&lt;&lt; Coffee Menu</a></p>
+      </section>
+
+      <section id="questions" class="page" data-title="Top Questions">
+<table border="0">
+  <tbody>
+    <tr>
+      <td style="font-family: verdana; padding: 5px; white-space: nowrap;" valign="top"><b>What is coffee?</b></td>
+      <td style="font-family: verdana; padding: 5px;" valign="top">Coffee is a beverage brewed from the roasted and ground seeds of the tropical evergreen coffee plant. Coffee is one of the three most popular beverages in the world (alongside water and tea), and it is one of the most profitable international commodities.</td>
+    </tr>
+    <tr>
+      <td style="font-family: verdana; padding: 5px; white-space: nowrap;" valign="top"><b>Where is coffee grown?</b></td>
+      <td style="font-family: verdana; padding: 5px;" valign="top">Latin America, eastern Africa, Asia, and Arabia are leading producers of Arabica coffee. The Arabica bean requires a cool subtropical climate. It grows at higher elevations and requires a lot of moisture, sun, and shade. Western and Central Africa, Southeast Asia, and Brazil are major producers of Robusta coffee. The Robusta bean can grow at lower elevations.</td>
+    </tr>
+    <tr>
+      <td style="font-family: verdana; padding: 5px; white-space: nowrap;" valign="top"><b>Where did coffee originate?</b></td>
+      <td style="font-family: verdana; padding: 5px;" valign="top">Wild coffee plants, probably from Kefa (Kaffa), Ethiopia, were taken to southern Arabia and placed under cultivation in the 15th century. The popularity of coffee in the Arab world led to the creation of the coffeehouse, first in Mecca and then in Constantinople in the 15th and 16th centuries, respectively. Coffee was introduced into one European country after another throughout the 16th and 17th centuries.</td>
+    </tr>
+  </tbody>
+</table>
+        <p class="page-nav"><a href="#menu">&lt;&lt; Coffee Menu</a></p>
+      </section>
+
+      <section id="types" class="page" data-title="Coffee Types">
+<p><span style="font-family: verdana;">A guide to some of the most popular coffee varieties and what they contain, from a simple espresso shot to more elaborate, milky concoctions. The caffeine content, a key component for many coffee drinkers, can vary significantly based on the type of coffee bean, the brewing method, and the serving size.</span></p>
+
+<hr>
+
+<p><span style="font-family: verdana;">These are the foundational drinks of the coffee world, containing only coffee and water, with no milk added.</span></p>
+<p><span style="font-family: verdana;"><i>* 'Caffine' is the typical milligram amount found per 30 ml or 1 oz shot of coffee.</i></span></p>
+<table border="0">
+  <thead>
+    <tr>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>Type</b></td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>Description</b></td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>Caffine</b></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top">Espresso</td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
+      <td style="font-family: verdana; padding: 2px;" valign="top">A small, concentrated coffee made by forcing hot, high-pressure water through finely-ground coffee beans. It's known for its intense flavour and creamy top layer called 'crema'. Serves as the base for many other coffee drinks.</td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
+      <td style="font-family: verdana; padding: 2px;" valign="top">163 mg</td>
+    </tr>
+    <tr>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top">Doppio</td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
+      <td style="font-family: verdana; padding: 2px;" valign="top">A double shot of espresso, offering a more intense flavour and higher caffeine content.</td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
+      <td style="font-family: verdana; padding: 2px;" valign="top">126 mg</td>
+    </tr>
+    <tr>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top">Ristretto</td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
+      <td style="font-family: verdana; padding: 2px;" valign="top">A "restricted" shot of espresso made with the same amount of coffee but about half the water. This results in a more concentrated, sweeter, and less bitter flavour than a standard espresso.</td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
+      <td style="font-family: verdana; padding: 2px;" valign="top">Slightly less than a standard espresso</td>
+    </tr>
+    <tr>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top">Lungo</td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
+      <td style="font-family: verdana; padding: 2px;" valign="top">A "long" shot of espresso made with the same amount of coffee but twice the water. It's more voluminous and has a more developed, but sometimes more bitter, flavour.</td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
+      <td style="font-family: verdana; padding: 2px;" valign="top">Slightly more than a standard espresso</td>
+    </tr>
+    <tr>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top">Americano<br>(Long Black)</td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
+      <td style="font-family: verdana; padding: 2px;" valign="top">An espresso shot diluted with hot water. For a Long Black, the espresso is poured over the hot water to preserve the crema. An Americano is the reverse. The strength is similar to drip coffee but with a different flavour profile.</td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
+      <td style="font-family: verdana; padding: 2px;" valign="top">Same as the espresso shot(s) used</td>
+    </tr>
+    <tr>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top">Drip/Filter<br>Coffee</td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
+      <td style="font-family: verdana; padding: 2px;" valign="top">A common method where hot water is poured over ground coffee, with the brew dripping through a filter. The taste can vary greatly depending on the beans and the specific brewing device used.</td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
+      <td style="font-family: verdana; padding: 2px;" valign="top">95 mg per 240ml / 8oz cup</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr>
+<h2 style="text-align: left;"><b style="color: #783f04; font-family: verdana; font-size: large;">Milk Based Coffees</b></h2>
+<p><span style="font-family: verdana;">These popular drinks are all based on an espresso shot (or shots) with the addition of steamed milk and foam.</span></p>
+<table border="0">
+  <thead>
+    <tr>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>Type</b></td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>Description</b></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top">Cappuccino</td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
+      <td style="font-family: verdana; padding: 2px;" valign="top">Traditionally an equal mix of espresso, steamed milk, and milk foam, often dusted with chocolate powder.</td>
+    </tr>
+    <tr>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top">Latte</td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
+      <td style="font-family: verdana; padding: 2px;" valign="top">Contains more steamed milk than a cappuccino and a small layer of foam on top, resulting in a milder, milkier flavour.</td>
+    </tr>
+    <tr>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top">Flat White</td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
+      <td style="font-family: verdana; padding: 2px;" valign="top">Originating from Australia or New Zealand, it's similar to a latte but with a higher coffee-to-milk ratio and a very thin, "flat" layer of steamed milk (microfoam).</td>
+    </tr>
+    <tr>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top">Macchiato</td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
+      <td style="font-family: verdana; padding: 2px;" valign="top">An espresso "stained" or "marked" with a small amount of steamed milk or foam. A "long macchiato" typically contains a double shot of espresso.</td>
+    </tr>
+    <tr>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top">Cortado</td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
+      <td style="font-family: verdana; padding: 2px;" valign="top">An espresso "cut" with an equal amount of warm milk to reduce the acidity.</td>
+    </tr>
+    <tr>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top">Mocha</td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
+      <td style="font-family: verdana; padding: 2px;" valign="top">A hybrid of a latte and hot chocolate, it's an espresso-based drink with chocolate syrup or powder and steamed milk, often topped with whipped cream.</td>
+    </tr>
+    <tr>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top">Piccolo<br>Latte</td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
+      <td style="font-family: verdana; padding: 2px;" valign="top">A smaller version of a latte, served in a small glass. It's a ristretto shot topped with steamed milk.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr>
+<h2 style="text-align: left;"><b style="color: #783f04; font-family: verdana; font-size: large;">Cold Coffees</b></h2>
+<p><span style="font-family: verdana;">Perfect for warmer weather, these coffees are served chilled.</span></p>
+<table border="0">
+  <thead>
+    <tr>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>Type</b></td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>Description</b></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top">Iced Coffee</td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
+      <td style="font-family: verdana; padding: 2px;" valign="top">Typically brewed hot and then cooled down, served over ice, often with milk and sugar or syrup. In some regions, it may also include a scoop of ice cream.</td>
+    </tr>
+    <tr>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top">Cold Brew</td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
+      <td style="font-family: verdana; padding: 2px;" valign="top">Made by steeping coffee grounds in cold or room-temperature water for an extended period (12-24 hours). This results in a smoother, less acidic, and often more caffeinated concentrate that is then diluted with water or milk.</td>
+    </tr>
+    <tr>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top">Nitro Cold Brew</td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
+      <td style="font-family: verdana; padding: 2px;" valign="top">Cold brew coffee infused with nitrogen gas, which gives it a creamy, stout-like texture and a foamy head.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr>
+<h2 style="text-align: left;"><b style="color: #783f04; font-family: verdana; font-size: large;">Factors Influencing Caffeine Content</b></h2>
+<p><span style="font-family: verdana;"></span></p>
+<table border="0">
+  <tbody>
+    <tr>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top">Bean Type</td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
+      <td style="font-family: verdana; padding: 2px;" valign="top">Robusta beans have a significantly higher caffeine content (2.5% or more) compared to the more common Arabica beans (around 1.5%).</td>
+    </tr>
+    <tr>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top">Roast Level</td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
+      <td style="font-family: verdana; padding: 2px;" valign="top">Lighter roasts tend to have slightly more caffeine by weight than darker roasts. However, the difference is often minimal in the final cup.</td>
+    </tr>
+    <tr>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top">Brewing Method</td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
+      <td style="font-family: verdana; padding: 2px;" valign="top">The way coffee is brewed affects how much caffeine is extracted. Methods with longer contact time between water and coffee, like cold brew, can result in higher caffeine levels.</td>
+    </tr>
+    <tr>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top">Serving Size</td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
+      <td style="font-family: verdana; padding: 2px;" valign="top">A larger cup of coffee will naturally contain more caffeine. A "double shot" in a milky coffee will have twice the caffeine of a "single shot".</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr>
+<h2 style="text-align: left;"><b style="color: #783f04; font-family: verdana; font-size: large;">Dairy Milk Options</b></h2>
+<p><span style="font-family: verdana;">Derived from cows, dairy milk is a traditional staple known for being a rich source of calcium and protein. The main differences between the types lie in their fat content.</span></p>
+<table border="0">
+  <thead>
+    <tr>
+      <td style="font-family: verdana; padding: 2px;" valign="top"><b>Type</b></td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
+      <td style="font-family: verdana; padding: 2px;" valign="top"><b>Description & Production</b></td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
+      <td style="font-family: verdana; padding: 2px;" valign="top"><b>Taste & Texture</b></td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
+      <td style="font-family: verdana; padding: 2px;" valign="top"><b>Common Uses</b></td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
+      <td style="font-family: verdana; padding: 2px;" valign="top"><b>Nutritional Notes</b></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top">Full Cream<br>(Whole) Milk</td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
+      <td style="font-family: verdana; padding: 2px;" valign="top">Cow's milk that has not had its fat content removed. It typically contains around 3.5% fat.</td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
+      <td style="font-family: verdana; padding: 2px;" valign="top">Rich, creamy, and full-bodied.</td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
+      <td style="font-family: verdana; padding: 2px;" valign="top">Excellent for drinking on its own, in coffee (produces rich foam), cooking, and for cereals.</td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
+      <td style="font-family: verdana; padding: 2px;" valign="top">High in natural proteins, calcium, and vitamins like B12 and D (often fortified). The fat content contributes to a feeling of satiety.</td>
+    </tr>
+    <tr>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top">Reduced-Fat<br>Milk (Light)</td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
+      <td style="font-family: verdana; padding: 2px;" valign="top">Milk from which some of the fat has been removed, usually containing around 1.5% to 2% fat.</td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
+      <td style="font-family: verdana; padding: 2px;" valign="top">Less creamy than full cream milk but has a similar flavour profile.</td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
+      <td style="font-family: verdana; padding: 2px;" valign="top">A popular all-purpose milk for those looking to reduce fat intake. Good for cereals, tea, and coffee.</td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
+      <td style="font-family: verdana; padding: 2px;" valign="top">Contains similar amounts of protein and calcium as full cream milk but with fewer calories and less fat.</td>
+    </tr>
+    <tr>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top">Skim Milk</td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
+      <td style="font-family: verdana; padding: 2px;" valign="top">Virtually all fat content has been removed, containing less than 0.15% fat.</td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
+      <td style="font-family: verdana; padding: 2px;" valign="top">Thinner, more watery consistency and a less rich taste compared to other dairy milks.</td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
+      <td style="font-family: verdana; padding: 2px;" valign="top">Often used by those on low-fat diets. Suitable for smoothies and cereals where other ingredients provide richness.</td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
+      <td style="font-family: verdana; padding: 2px;" valign="top">Lowest in calories and fat. It retains most of the protein and calcium of full cream milk.</td>
+    </tr>
+    <tr>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top">Lactose-Free<br>Milk</td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
+      <td style="font-family: verdana; padding: 2px;" valign="top">This is regular cow's milk (full cream, reduced-fat, or skim) with the natural sugar, lactose, broken down by adding the lactase enzyme.</td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
+      <td style="font-family: verdana; padding: 2px;" valign="top">Tastes slightly sweeter than regular milk because the lactose is broken down into simpler, sweeter-tasting sugars (glucose and galactose).</td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
+      <td style="font-family: verdana; padding: 2px;" valign="top">An excellent alternative for individuals with lactose intolerance who still want the nutritional benefits and taste of dairy milk.</td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
+      <td style="font-family: verdana; padding: 2px;" valign="top">Provides the same nutritional profile (protein, calcium, vitamins) as its regular dairy counterpart, just without the lactose.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr>
+<h2 style="text-align: left;"><b style="color: #783f04; font-family: verdana; font-size: large;">Plant-Based Milk Options</b></h2>
+<p><span style="font-family: verdana;">These are water-based plant extracts that resemble dairy milk. Their nutritional profiles can vary significantly, and they are often fortified with vitamins and minerals like calcium and vitamin D to be more comparable to dairy.</span></p>
+<table border="0">
+  <thead>
+    <tr>
+      <td style="font-family: verdana; padding: 2px;" valign="top"><b>Type</b></td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
+      <td style="font-family: verdana; padding: 2px;" valign="top"><b>Description & Production</b></td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
+      <td style="font-family: verdana; padding: 2px;" valign="top"><b>Taste & Texture</b></td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
+      <td style="font-family: verdana; padding: 2px;" valign="top"><b>Common Uses</b></td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
+      <td style="font-family: verdana; padding: 2px;" valign="top"><b>Nutritional Notes</b></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top">Oat Milk</td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
+      <td style="font-family: verdana; padding: 2px;" valign="top">Made from a mixture of oats and water that is blended and then strained.</td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
+      <td style="font-family: verdana; padding: 2px;" valign="top">Naturally sweet, mild, and creamy. Its texture is one of the closest to dairy milk, making it excellent for frothing.</td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
+      <td style="font-family: verdana; padding: 2px;" valign="top">A favourite among baristas for lattes and cappuccinos. Also popular on cereal, in smoothies, and for drinking straight.</td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
+      <td style="font-family: verdana; padding: 2px;" valign="top">ypically higher in carbohydrates and fibre than other plant milks. Check labels for added sugars.</td>
+    </tr>
+    <tr>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top">Almond Milk</td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
+      <td style="font-family: verdana; padding: 2px;" valign="top">Produced by blending almonds with water and then straining the pulp.</td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
+      <td style="font-family: verdana; padding: 2px;" valign="top">Has a light, nutty flavour and a thinner, more watery texture than dairy or oat milk.</td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
+      <td style="font-family: verdana; padding: 2px;" valign="top">Good for smoothies, cereals, and in recipes where a subtle nutty flavour is desired. Not ideal for frothing in coffee due to its lower protein content.</td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
+      <td style="font-family: verdana; padding: 2px;" valign="top">Lower in calories, fat, and protein compared to dairy milk. Look for unsweetened versions. Not suitable for those with nut allergies.</td>
+    </tr>
+    <tr>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top">Soy Milk</td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
+      <td style="font-family: verdana; padding: 2px;" valign="top">Made from soaked soybeans that are ground with water. It was one of the first mainstream dairy alternatives.</td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
+      <td style="font-family: verdana; padding: 2px;" valign="top">Creamy texture and a distinct, beany flavour.</td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
+      <td style="font-family: verdana; padding: 2px;" valign="top">A versatile all-rounder for coffee, cooking, and cereals. It's one of the few plant milks that can be used to make yogurt.</td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
+      <td style="font-family: verdana; padding: 2px;" valign="top">Its key feature is its high protein content, which is comparable to dairy milk. A good source of potassium.</td>
+    </tr>
+    <tr>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top">Coconut Milk<br>(Beverage)</td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
+      <td style="font-family: verdana; padding: 2px;" valign="top">This is the diluted version of the canned coconut milk used for cooking. It's made from water and the flesh of a mature coconut.</td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
+      <td style="font-family: verdana; padding: 2px;" valign="top">Creamy texture with a distinct, sweet, coconut flavour.</td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
+      <td style="font-family: verdana; padding: 2px;" valign="top">Best used in smoothies, lattes, and certain dishes where its tropical flavour is complementary.</td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
+      <td style="font-family: verdana; padding: 2px;" valign="top">Naturally low in protein and high in saturated fat (though the type of fat is debated in terms of health impact).</td>
+    </tr>
+    <tr>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top">Rice Milk</td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
+      <td style="font-family: verdana; padding: 2px;" valign="top">Typically made from milled brown rice and water.</td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
+      <td style="font-family: verdana; padding: 2px;" valign="top">Very mild and noticeably sweet flavour with a thin, watery consistency.</td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
+      <td style="font-family: verdana; padding: 2px;" valign="top">An option for those with nut or soy allergies. Best suited for cereals and some cooking applications.</td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
+      <td style="font-family: verdana; padding: 2px;" valign="top">High in carbohydrates and often has a higher sugar content. It is very low in protein.</td>
+    </tr>
+  </tbody>
+</table>
+        <p class="page-nav"><a href="#menu">&lt;&lt; Coffee Menu</a></p>
+      </section>
+
+      <section id="mandalay" class="page" data-title="Mandalay Coffee">
+<p><span style="font-family: verdana;">This web page provides a simple understanding of the varying types of coffees you can order from the Mandalay Club House.</span></p>
+
+<table>
+  <thead>
+    <tr>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>Name</b></td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>Content</b></td>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="font-family: verdana; padding: 2px;" valign="top">Latte</td>
+      <td style="font-family: verdana; padding: 2px;" valign="top">1 or more shots of expresso<br>Hot milk with frooth</td>
+      
+    </tr>
+  </tbody>
+</table>
+        <p class="page-nav"><a href="#menu">&lt;&lt; Coffee Menu</a></p>
+      </section>
+    </div>
+    <footer>Copyright Mark Read</footer>
+  </div>
+  <script>
+    const pages = ["menu", "overview", "questions", "types", "mandalay"];
+    const heading = document.getElementById("site-heading");
+    const topnav = document.getElementById("topnav");
+    function show(id) {
+      if (!pages.includes(id)) id = "menu";
+      const section = document.getElementById(id);
+      document.querySelectorAll("section.page").forEach((el) => {
+        el.classList.toggle("active", el.id === id);
+      });
+      topnav.querySelectorAll("a").forEach((a) => {
+        a.classList.toggle("active", a.getAttribute("data-page") === id);
+      });
+      const title = section.getAttribute("data-title") || "About Coffee";
+      heading.textContent = title;
+      document.title = title + " — About Coffee";
+      window.scrollTo(0, 0);
+    }
+    function fromHash() { show((location.hash || "#menu").slice(1)); }
+    window.addEventListener("hashchange", fromHash);
+    fromHash();
+  </script>
+</body>
+</html>
