@@ -77,6 +77,14 @@
     nav.topbar a:hover,
     nav.topbar a:focus { background: #f7efe6; }
     nav.topbar a.active { background: var(--brown); color: #fff; }
+    nav.topbar.vertical {
+      flex-direction: column;
+      flex-wrap: nowrap;
+    }
+    nav.topbar.vertical a {
+      flex: 0 0 auto;
+      width: 100%;
+    }
     section.page { display: none; }
     section.page.active { display: block; }
     section.page p { overflow-wrap: anywhere; }
@@ -91,18 +99,6 @@
       vertical-align: top;
       border-bottom: 1px solid #eee;
     }
-    #menu table { width: 100%; max-width: 22rem; }
-    #menu table td {
-      padding: 0;
-      border-bottom: 0;
-    }
-    #menu table a {
-      display: flex;
-      align-items: center;
-      min-height: 48px;
-      padding: 12px 14px;
-      touch-action: manipulation;
-    }
     .table-scroll {
       overflow-x: auto;
       -webkit-overflow-scrolling: touch;
@@ -112,7 +108,7 @@
     footer { text-align: center; color: #8a8a8a; font-size: 0.82rem; margin-top: 28px; }
     @media (max-width: 640px) {
       nav.topbar { gap: 6px; }
-      nav.topbar a { flex: 1 1 calc(50% - 6px); }
+      nav.topbar:not(.vertical) a { flex: 1 1 calc(50% - 6px); }
       #questions table,
       #questions tbody,
       #questions tr,
@@ -150,26 +146,7 @@
         <a href="#mandalay" data-page="mandalay">Mandalay coffee</a>
       </nav>
 
-      <section id="menu" class="page active" data-title="Coffee Menu">
-<p><span style="font-family: verdana;">Visit the various pages below for more information on coffee.</span></p>
-
-<table border="2" color="white">
-  <tbody>
-    <tr>
-      <td style="font-family: verdana; background-color: #783f04; padding: 10px;"><a href="#questions" style="color: white; text-decoration: none;">Top questions &gt;&gt;</a></td>
-    </tr>
-    <tr>
-      <td style="font-family: verdana; background-color: #783f04; padding: 10px;"><a href="#overview" style="color: white; text-decoration: none;">Coffee - a quick overview &gt;&gt;</a></td>
-    </tr>
-    <tr>
-      <td style="font-family: verdana; background-color: #783f04; padding: 10px;"><a href="#types" style="color: white; text-decoration: none;">Coffee types &gt;&gt;</a></td>
-    </tr>
-    <tr>
-      <td style="font-family: verdana; background-color: #783f04; padding: 10px;"><a href="#mandalay" style="color: white; text-decoration: none;">Mandalay coffee &gt;&gt;</a></td>
-    </tr>
-  </tbody>
-</table>
-      </section>
+      <section id="menu" class="page active" data-title="Coffee Menu"></section>
 
       <section id="overview" class="page" data-title="Coffee - a quick overview">
 <p><span style="font-family: verdana;"><span color="rgba(0, 0, 0, 0.8)" style="font-weight: 700;">Coffee</span><span color="rgba(0, 0, 0, 0.8)" style="background-color: white;">&nbsp;</span><span color="rgba(0, 0, 0, 0.8)" style="background-color: white;">is a popular beverage brewed from the roasted and ground seeds of the coffee plant. It has a rich history and cultural significance, being adored by many around the world. Here are some key points about coffee:</span></span></p>
@@ -553,6 +530,7 @@
       topnav.querySelectorAll("a").forEach((a) => {
         a.classList.toggle("active", a.getAttribute("data-page") === id);
       });
+      topnav.classList.toggle("vertical", id === "menu");
       const title = section.getAttribute("data-title") || "About Coffee";
       heading.textContent = title;
       document.title = title + " — About Coffee";
