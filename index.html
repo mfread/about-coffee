@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>About Coffee</title>
   <meta name="description" content="A brief look at coffee in all its sensory splendor." />
   <meta name="author" content="Mark Read" />
@@ -16,48 +16,122 @@
       --brown-hover: #5c3003;
     }
     * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
     body {
       margin: 0;
       font-family: Verdana, Geneva, Tahoma, sans-serif;
       background: var(--bg);
       color: var(--ink);
       line-height: 1.6;
+      font-size: clamp(16px, 2.8vw, 18px);
     }
-    .wrap { max-width: 860px; margin: 0 auto; padding: 28px 16px 64px; }
-    header.site { padding: 8px 4px 18px; }
+    .wrap {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 16px 12px 48px;
+      padding-left: max(12px, env(safe-area-inset-left));
+      padding-right: max(12px, env(safe-area-inset-right));
+      padding-bottom: max(48px, env(safe-area-inset-bottom));
+    }
+    header.site { padding: 8px 4px 16px; }
     header.site .kicker {
-      font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase;
+      font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase;
       color: var(--brown); font-weight: 700;
     }
-    header.site h1 { margin: 6px 0 4px; font-size: 1.7rem; }
+    header.site h1 {
+      margin: 6px 0 4px;
+      font-size: clamp(1.35rem, 5vw, 1.7rem);
+      line-height: 1.25;
+    }
     header.site p.tag { margin: 0; color: var(--muted); font-size: 0.95rem; }
     .card {
       background: var(--card);
       box-shadow: 0 1px 3px rgba(0,0,0,.12);
-      padding: 28px 28px 36px;
-      overflow-x: auto;
+      padding: clamp(16px, 4vw, 28px);
     }
-    nav.topbar { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 22px; }
+    nav.topbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 0 0 18px;
+      position: sticky;
+      top: 0;
+      z-index: 5;
+      background: var(--card);
+      padding: 8px 0;
+    }
     nav.topbar a {
-      font-size: 0.78rem; color: var(--brown); text-decoration: none;
-      border: 1px solid var(--brown); padding: 5px 10px; background: #fff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 8px 14px;
+      font-size: 0.85rem;
+      color: var(--brown);
+      text-decoration: none;
+      border: 1px solid var(--brown);
+      background: #fff;
+      border-radius: 6px;
+      touch-action: manipulation;
     }
-    nav.topbar a:hover { background: #f7efe6; }
+    nav.topbar a:hover,
+    nav.topbar a:focus { background: #f7efe6; }
     nav.topbar a.active { background: var(--brown); color: #fff; }
     section.page { display: none; }
     section.page.active { display: block; }
-    section.page table { border-collapse: collapse; margin: 12px 0 20px; width: 100%; }
+    section.page p { overflow-wrap: anywhere; }
+    section.page table {
+      border-collapse: collapse;
+      margin: 12px 0 20px;
+      width: 100%;
+    }
     section.page td, section.page th {
       font-family: Verdana, Geneva, Tahoma, sans-serif;
-      padding: 6px 8px;
+      padding: 10px 8px;
       vertical-align: top;
       border-bottom: 1px solid #eee;
     }
-    section.page .menu-table td { border-bottom: 0; }
-    .page-nav { margin-top: 24px; padding-top: 14px; border-top: 1px dashed rgba(0,0,0,.2); font-size: 0.9rem; }
-    .page-nav a { color: var(--brown); }
+    #menu table { width: 100%; max-width: 22rem; }
+    #menu table td {
+      padding: 0;
+      border-bottom: 0;
+    }
+    #menu table a {
+      display: flex;
+      align-items: center;
+      min-height: 48px;
+      padding: 12px 14px;
+      touch-action: manipulation;
+    }
+    .table-scroll {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 12px 0 20px;
+    }
+    .table-scroll table { margin: 0; min-width: 520px; }
     footer { text-align: center; color: #8a8a8a; font-size: 0.82rem; margin-top: 28px; }
-    @media (max-width: 520px) { .card { padding: 20px 14px 28px; } }
+    @media (max-width: 640px) {
+      nav.topbar { gap: 6px; }
+      nav.topbar a { flex: 1 1 calc(50% - 6px); }
+      #questions table,
+      #questions tbody,
+      #questions tr,
+      #questions td {
+        display: block;
+        width: 100%;
+        white-space: normal !important;
+      }
+      #questions tr {
+        padding: 10px 0 12px;
+        border-bottom: 1px solid #e6e6e6;
+      }
+      #questions td:first-child {
+        font-weight: 700;
+        padding-bottom: 2px;
+        border-bottom: 0;
+      }
+      #questions td + td { border-bottom: 0; }
+    }
   </style>
 </head>
 <body>
@@ -95,7 +169,6 @@
     </tr>
   </tbody>
 </table>
-        <p class="page-nav"><a href="#questions">Top questions &gt;&gt;</a></p>
       </section>
 
       <section id="overview" class="page" data-title="Coffee - a quick overview">
@@ -110,7 +183,6 @@
 </ul>
 <p>For more detailed information, you can explore the sources: National Coffee Association, Britannica, and The Coffee Bump.</p>
 
-        <p class="page-nav"><a href="#menu">&lt;&lt; Coffee Menu</a></p>
       </section>
 
       <section id="questions" class="page" data-title="Top Questions">
@@ -130,7 +202,6 @@
     </tr>
   </tbody>
 </table>
-        <p class="page-nav"><a href="#menu">&lt;&lt; Coffee Menu</a></p>
       </section>
 
       <section id="types" class="page" data-title="Coffee Types">
@@ -444,7 +515,6 @@
     </tr>
   </tbody>
 </table>
-        <p class="page-nav"><a href="#menu">&lt;&lt; Coffee Menu</a></p>
       </section>
 
       <section id="mandalay" class="page" data-title="Mandalay Coffee">
@@ -466,7 +536,6 @@
     </tr>
   </tbody>
 </table>
-        <p class="page-nav"><a href="#menu">&lt;&lt; Coffee Menu</a></p>
       </section>
     </div>
     <footer>Copyright Mark Read</footer>
@@ -492,6 +561,13 @@
     function fromHash() { show((location.hash || "#menu").slice(1)); }
     window.addEventListener("hashchange", fromHash);
     fromHash();
+    document.querySelectorAll("#types table, #mandalay table").forEach((table) => {
+      if (table.parentElement.classList.contains("table-scroll")) return;
+      const wrap = document.createElement("div");
+      wrap.className = "table-scroll";
+      table.parentNode.insertBefore(wrap, table);
+      wrap.appendChild(table);
+    });
   </script>
 </body>
 </html>
