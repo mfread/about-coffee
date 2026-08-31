@@ -175,7 +175,7 @@
     <header class="site">
       <div class="kicker">About Coffee</div>
       <h1 id="site-heading">Coffee Menu</h1>
-      <p class="tag">A brief look at coffee in all its sensory splendor :)</p>
+      <p class="tag" id="site-tag">A brief look at coffee in all its sensory splendor :)</p>
     </header>
     <div class="card">
       <nav class="topbar" id="topnav" aria-label="Site sections">
@@ -186,9 +186,9 @@
         <a href="#mandalay" data-page="mandalay">Mandalay coffee</a>
       </nav>
 
-      <section id="menu" class="page active" data-title="Coffee Menu"></section>
+      <section id="menu" class="page active" data-title="Coffee Menu" data-tag="A brief look at coffee in all its sensory splendor :)"></section>
 
-      <section id="overview" class="page" data-title="Coffee - a quick overview">
+      <section id="overview" class="page" data-title="Coffee overview" data-tag="A quick overview of coffee">
 <p><span style="font-family: verdana;"><span color="rgba(0, 0, 0, 0.8)" style="font-weight: 700;">Coffee</span><span color="rgba(0, 0, 0, 0.8)" style="background-color: white;">&nbsp;</span><span color="rgba(0, 0, 0, 0.8)" style="background-color: white;">is a popular beverage brewed from the roasted and ground seeds of the coffee plant. It has a rich history and cultural significance, being adored by many around the world. Here are some key points about coffee:</span></span></p>
 
 <ul>
@@ -202,7 +202,7 @@
 
       </section>
 
-      <section id="questions" class="page" data-title="Top Questions">
+      <section id="questions" class="page" data-title="Top Questions" data-tag="Frequently asked questions">
 <table border="0">
   <tbody>
     <tr>
@@ -221,7 +221,7 @@
 </table>
       </section>
 
-      <section id="types" class="page" data-title="Coffee Types">
+      <section id="types" class="page" data-title="Coffee Types" data-tag="A guide to the various coffee types">
 <p><span style="font-family: verdana;">A guide to some of the most popular coffee varieties and what they contain, from a simple espresso shot to more elaborate, milky concoctions. The caffeine content, a key component for many coffee drinkers, can vary significantly based on the type of coffee bean, the brewing method, and the serving size.</span></p>
 
 <hr>
@@ -534,7 +534,7 @@
 </table>
       </section>
 
-      <section id="mandalay" class="page" data-title="Mandalay Coffee">
+      <section id="mandalay" class="page" data-title="Mandalay Coffee" data-tag="Coffees available at the Mandalay Grocer">
 <p><span style="font-family: verdana;">This web page provides a simple understanding of the varying types of coffees you can order from the Mandalay Club House.</span></p>
 
 <table>
@@ -560,6 +560,7 @@
   <script>
     const pages = ["menu", "overview", "questions", "types", "mandalay"];
     const heading = document.getElementById("site-heading");
+    const tag = document.getElementById("site-tag");
     const topnav = document.getElementById("topnav");
     function show(id) {
       if (!pages.includes(id)) id = "menu";
@@ -573,6 +574,7 @@
       topnav.classList.toggle("vertical", id === "menu");
       const title = section.getAttribute("data-title") || "About Coffee";
       heading.textContent = title;
+      tag.textContent = section.getAttribute("data-tag") || "";
       document.title = title + " — About Coffee";
       window.scrollTo(0, 0);
     }
