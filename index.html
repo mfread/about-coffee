@@ -44,6 +44,11 @@
       line-height: 1.25;
     }
     header.site p.tag { margin: 0; color: var(--muted); font-size: 0.95rem; }
+    a.ext {
+      color: #0563c1;
+      text-decoration: underline;
+    }
+    a.ext:visited { color: #551a8b; }
     .card {
       background: var(--card);
       box-shadow: 0 1px 3px rgba(0,0,0,.12);
@@ -135,7 +140,7 @@
     }
     table.cards td {
       border-bottom: 0;
-      padding: 6px 0;
+      padding: 6px 0 !important;
     }
     table.cards td:first-child {
       font-weight: 700;
@@ -160,6 +165,11 @@
       border-top: 1px dashed rgba(0,0,0,.18);
       text-align: right;
     }
+    .to-top.section-top {
+      margin: 8px 0 6px;
+      padding-top: 0;
+      border-top: 0;
+    }
     .to-top button {
       display: inline-flex;
       align-items: center;
@@ -180,27 +190,10 @@
     .to-top button:hover,
     .to-top button:focus { background: #f7efe6; }
     footer { text-align: center; color: #8a8a8a; font-size: 0.82rem; margin-top: 28px; }
-    #questions table,
-    #questions tbody,
-    #questions tr,
-    #questions td {
-      display: block;
-      width: 100%;
-      white-space: normal !important;
-    }
-    #questions tr {
-      padding: 10px 0 14px;
-      border-bottom: 1px solid #e6e6e6;
-    }
-    #questions tr:last-child,
-    #questions tr:last-child td { border-bottom: 0; }
-    #questions td:first-child {
-      font-weight: 700;
-      padding-bottom: 2px;
-      border-bottom: 0;
-    }
-    #questions td + td { border-bottom: 0; }
-    #questions .to-top { border-top: 0; }
+    #questions table.cards td { padding-left: 0; padding-right: 0; }
+    #overview .to-top,
+    #questions .to-top,
+    #more .to-top { border-top: 0; }
     @media (max-width: 640px) {
       nav.topbar { gap: 6px; }
       nav.topbar:not(.vertical) a { flex: 1 1 calc(50% - 6px); }
@@ -211,33 +204,39 @@
   <div class="wrap">
     <header class="site">
       <div class="kicker">About Coffee</div>
-      <h1 id="site-heading">Home</h1>
+      <h1 id="site-heading">Coffee Overview</h1>
       <p class="tag" id="site-tag">A brief look at coffee in all its sensory splendor :)</p>
     </header>
     <div class="card">
       <nav class="topbar" id="topnav" aria-label="Site sections">
-        <a href="#menu" data-page="menu">Home</a>
-        <a href="#overview" data-page="overview">Coffee overview</a>
-        <a href="#questions" data-page="questions">Coffee questions</a>
-        <a href="#types" data-page="types">Coffee types</a>
+        <a href="#overview" data-page="overview">Coffee Overview</a>
+        <a href="#questions" data-page="questions">Coffee Questions</a>
+        <a href="#types" data-page="types">Coffee Types</a>
+        <a href="#more" data-page="more">More Info</a>
         <!--<a href="#mandalay" data-page="mandalay">Mandalay coffee</a>-->
       </nav>
 
-      <section id="menu" class="page active" data-title="Home" data-tag="A brief look at coffee in all its sensory splendor :)"></section>
-
-      <section id="overview" class="page" data-title="Overview" data-tag="A quick overview of coffee.">
+      <section id="overview" class="page active" data-title="Coffee Overview" data-tag="A brief look at coffee in all its sensory splendor :)">
 		<span style="font-family: verdana;">
 		<p>Coffee is a popular beverage brewed from the roasted and ground seeds of the coffee plant. It has a rich history and cultural significance, being adored by many around the world. Here are some key points about coffee:</p>
-		<p><b style="color: #783f04; font-family: verdana; font-size: large;">Origins:</b> Coffee is believed to have originated in Ethiopia and has since spread globally, becoming one of the most profitable international commodities.</p>
-		<p><b style="color: #783f04; font-family: verdana; font-size: large;">Types:</b> There are various types of coffee, including espresso, cappuccino, and cold brew, each with unique flavors and brewing methods.</p>
-		<p><b style="color: #783f04; font-family: verdana; font-size: large;">Brewing Methods:</b> Common brewing methods include drip brewing, French press, and espresso machines, each affecting the flavor and strength of the coffee.</p>
-		<p><b style="color: #783f04; font-family: verdana; font-size: large;">Health Benefits:</b> Research indicates that coffee may have health benefits, including improved cognitive function and a lower risk of certain diseases, although moderation is key.</p>
-		<p><b style="color: #783f04; font-family: verdana; font-size: large;">Caffeine Content:</b> Coffee contains caffeine, a natural stimulant that can enhance alertness and energy levels.</p>
-		<p>For more detailed information, you can explore the sources: National Coffee Association, Britannica, and The Coffee Bump.</p>
+		<p><b style="color: #783f04; font-family: verdana; font-size: large;">Origins</b> Coffee is believed to have originated in Ethiopia and has since spread globally, becoming one of the most profitable international commodities.</p>
+		<p><b style="color: #783f04; font-family: verdana; font-size: large;">Types</b> There are various types of coffee, including espresso, cappuccino, and cold brew, each with unique flavors and brewing methods.</p>
+		<p><b style="color: #783f04; font-family: verdana; font-size: large;">Brewing Methods</b> Common brewing methods include drip brewing, French press, and espresso machines, each affecting the flavor and strength of the coffee.</p>
+		<p><b style="color: #783f04; font-family: verdana; font-size: large;">Health Benefits</b> Research indicates that coffee may have health benefits, including improved cognitive function and a lower risk of certain diseases, although moderation is key.</p>
+		<p><b style="color: #783f04; font-family: verdana; font-size: large;">Caffeine Content</b> Coffee contains caffeine, a natural stimulant that can enhance alertness and energy levels.</p>
 		</span>
       </section>
 
-      <section id="questions" class="page" data-title="Coffee questions" data-tag="Frequently asked questions.">
+      <section id="more" class="page" data-title="More Info" data-tag="Sources for further reading.">
+        <p>Explore these resources for more detailed information:</p>
+        <ul>
+          <li><a class="ext" href="https://www.aboutcoffee.org/" target="_blank" rel="noopener noreferrer">National Coffee Association</a></li>
+          <li><a class="ext" href="https://www.britannica.com/topic/coffee" target="_blank" rel="noopener noreferrer">Britannica</a></li>
+          <li><a class="ext" href="https://www.thecoffeebump.com/" target="_blank" rel="noopener noreferrer">The Coffee Bump</a></li>
+        </ul>
+      </section>
+
+      <section id="questions" class="page" data-title="Coffee Questions" data-tag="Frequently asked questions.">
 		<table border="0">
 		  <tbody>
 			<tr>
@@ -256,7 +255,7 @@
 		</table>
       </section>
 
-      <section id="types" class="page" data-title="Types" data-tag="A guide to the various coffee types.">
+      <section id="types" class="page" data-title="Coffee Types" data-tag="A guide to the various coffee types.">
 <p><span style="font-family: verdana;">The following is a guide to some of the most popular coffee varieties and what they contain, from a simple espresso shot to more elaborate, milky concoctions. The caffeine content, a key component for many coffee drinkers, can vary significantly based on the type of coffee bean, the brewing method, and the serving size.</span></p>
 
 <hr>
@@ -596,12 +595,12 @@
   </div>
   <script>
     //const pages = ["menu", "overview", "questions", "types", "mandalay"];
-    const pages = ["menu", "overview", "questions", "types"];
+    const pages = ["overview", "questions", "types", "more"];
     const heading = document.getElementById("site-heading");
     const tag = document.getElementById("site-tag");
     const topnav = document.getElementById("topnav");
     function show(id) {
-      if (!pages.includes(id)) id = "menu";
+      if (!pages.includes(id)) id = "overview";
       const section = document.getElementById(id);
       document.querySelectorAll("section.page").forEach((el) => {
         el.classList.toggle("active", el.id === id);
@@ -609,14 +608,13 @@
       topnav.querySelectorAll("a").forEach((a) => {
         a.classList.toggle("active", a.getAttribute("data-page") === id);
       });
-      topnav.classList.toggle("vertical", id === "menu");
       const title = section.getAttribute("data-title") || "About Coffee";
       heading.textContent = title;
       tag.textContent = section.getAttribute("data-tag") || "";
       document.title = title + " — About Coffee";
       window.scrollTo(0, 0);
     }
-    function fromHash() { show((location.hash || "#menu").slice(1)); }
+    function fromHash() { show((location.hash || "#overview").slice(1)); }
     window.addEventListener("hashchange", fromHash);
     fromHash();
     document.querySelectorAll("#overview p").forEach((p) => {
@@ -643,10 +641,9 @@
         });
       });
     });
-    document.querySelectorAll("section.page").forEach((section) => {
-      if (section.id === "menu" || section.querySelector(".to-top")) return;
+    function addToTop(target, before, extraClass) {
       const p = document.createElement("p");
-      p.className = "to-top";
+      p.className = extraClass ? "to-top " + extraClass : "to-top";
       const btn = document.createElement("button");
       btn.type = "button";
       btn.setAttribute("aria-label", "Back to top");
@@ -655,7 +652,16 @@
         window.scrollTo({ top: 0, behavior: "smooth" });
       });
       p.appendChild(btn);
-      section.appendChild(p);
+      if (before) target.parentNode.insertBefore(p, target);
+      else target.appendChild(p);
+    }
+    document.querySelectorAll("#types hr").forEach((hr, i) => {
+      if (i === 0) return;
+      addToTop(hr, true, "section-top");
+    });
+    document.querySelectorAll("section.page").forEach((section) => {
+      if (section.querySelector(".to-top:not(.section-top)")) return;
+      addToTop(section, false);
     });
   </script>
 </body>
