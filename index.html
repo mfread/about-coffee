@@ -117,32 +117,33 @@
       margin: 0;
       width: 100%;
     }
-    #types table.cards thead { display: none; }
-    #types table.cards,
-    #types table.cards tbody,
-    #types table.cards tr,
-    #types table.cards td {
+    table.cards thead { display: none; }
+    table.cards,
+    table.cards tbody,
+    table.cards tr,
+    table.cards td {
       display: block;
       width: 100%;
     }
-    #types table.cards tr {
+    table.cards tr,
+    #overview p.topic-card {
       background: #faf7f3;
       border: 1px solid #e8dccb;
       border-radius: 10px;
       margin: 0 0 12px;
       padding: 10px 12px 8px;
     }
-    #types table.cards td {
+    table.cards td {
       border-bottom: 0;
       padding: 6px 0;
     }
-    #types table.cards td:first-child {
+    table.cards td:first-child {
       font-weight: 700;
       color: var(--brown);
       font-size: 1.05rem;
       padding-bottom: 8px;
     }
-    #types table.cards td:not(:first-child)::before {
+    table.cards td:not(:first-child)::before {
       content: attr(data-label);
       display: block;
       font-size: 0.72rem;
@@ -152,6 +153,7 @@
       color: var(--brown);
       margin: 2px 0 2px;
     }
+    #overview p.topic-card b { display: block; margin-bottom: 4px; }
     .to-top {
       margin: 28px 0 0;
       padding-top: 14px;
@@ -301,14 +303,14 @@
       <td style="font-family: verdana; padding: 2px;" valign="top">Slightly more than a standard espresso</td>
     </tr>
     <tr>
-      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top">Americano<br>(Long Black)</td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top">Americano (Long Black)</td>
       <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
       <td style="font-family: verdana; padding: 2px;" valign="top">An espresso shot diluted with hot water. For a Long Black, the espresso is poured over the hot water to preserve the crema. An Americano is the reverse. The strength is similar to drip coffee but with a different flavour profile.</td>
       <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
       <td style="font-family: verdana; padding: 2px;" valign="top">Same as the espresso shot(s) used</td>
     </tr>
     <tr>
-      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top">Drip/Filter<br>Coffee</td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top">Drip/Filter Coffee</td>
       <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
       <td style="font-family: verdana; padding: 2px;" valign="top">A common method where hot water is poured over ground coffee, with the brew dripping through a filter. The taste can vary greatly depending on the beans and the specific brewing device used.</td>
       <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
@@ -360,7 +362,7 @@
       <td style="font-family: verdana; padding: 2px;" valign="top">A hybrid of a latte and hot chocolate, it's an espresso-based drink with chocolate syrup or powder and steamed milk, often topped with whipped cream.</td>
     </tr>
     <tr>
-      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top">Piccolo<br>Latte</td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top">Piccolo Latte</td>
       <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
       <td style="font-family: verdana; padding: 2px;" valign="top">A smaller version of a latte, served in a small glass. It's a ristretto shot topped with steamed milk.</td>
     </tr>
@@ -444,7 +446,7 @@
   </thead>
   <tbody>
     <tr>
-      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top">Full Cream<br>(Whole) Milk</td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top">Full Cream (Whole) Milk</td>
       <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
       <td style="font-family: verdana; padding: 2px;" valign="top">Cow's milk that has not had its fat content removed. It typically contains around 3.5% fat.</td>
       <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
@@ -455,7 +457,7 @@
       <td style="font-family: verdana; padding: 2px;" valign="top">High in natural proteins, calcium, and vitamins like B12 and D (often fortified). The fat content contributes to a feeling of satiety.</td>
     </tr>
     <tr>
-      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top">Reduced-Fat<br>Milk (Light)</td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top">Reduced-Fat Milk (Light)</td>
       <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
       <td style="font-family: verdana; padding: 2px;" valign="top">Milk from which some of the fat has been removed, usually containing around 1.5% to 2% fat.</td>
       <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
@@ -477,7 +479,7 @@
       <td style="font-family: verdana; padding: 2px;" valign="top">Lowest in calories and fat. It retains most of the protein and calcium of full cream milk.</td>
     </tr>
     <tr>
-      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top">Lactose-Free<br>Milk</td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top">Lactose-Free Milk</td>
       <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
       <td style="font-family: verdana; padding: 2px;" valign="top">This is regular cow's milk (full cream, reduced-fat, or skim) with the natural sugar, lactose, broken down by adding the lactase enzyme.</td>
       <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
@@ -542,7 +544,7 @@
       <td style="font-family: verdana; padding: 2px;" valign="top">Its key feature is its high protein content, which is comparable to dairy milk. A good source of potassium.</td>
     </tr>
     <tr>
-      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top">Coconut Milk<br>(Beverage)</td>
+      <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top">Coconut Milk (Beverage)</td>
       <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
       <td style="font-family: verdana; padding: 2px;" valign="top">This is the diluted version of the canned coconut milk used for cooking. It's made from water and the flesh of a mature coconut.</td>
       <td style="font-family: verdana; padding: 2px; white-space: nowrap;" valign="top"><b>&nbsp;&nbsp;</b></td>
@@ -617,10 +619,13 @@
     function fromHash() { show((location.hash || "#menu").slice(1)); }
     window.addEventListener("hashchange", fromHash);
     fromHash();
+    document.querySelectorAll("#overview p").forEach((p) => {
+      if (p.querySelector("b")) p.classList.add("topic-card");
+    });
     document.querySelectorAll("#types table td, #types table th").forEach((cell) => {
       if (cell.textContent.replace(/\u00a0/g, " ").trim() === "") cell.remove();
     });
-    document.querySelectorAll("#types table").forEach((table) => {
+    document.querySelectorAll("#types table, #questions table").forEach((table) => {
       const firstRow = table.querySelector("tr");
       if (!firstRow) return;
       const colCount = firstRow.children.length;
@@ -632,7 +637,8 @@
         [...tr.children].forEach((td, i) => {
           if (i === 0) return;
           if (!td.getAttribute("data-label")) {
-            td.setAttribute("data-label", headers[i] || (i === 1 ? "Description" : "Caffeine"));
+            if (headers[i]) td.setAttribute("data-label", headers[i]);
+            else if (table.closest("#types")) td.setAttribute("data-label", i === 1 ? "Description" : "Caffeine");
           }
         });
       });
