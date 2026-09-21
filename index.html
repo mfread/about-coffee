@@ -158,6 +158,20 @@
       color: var(--brown);
       margin: 2px 0 2px;
     }
+    table.cards td.drink-photo-cell {
+      padding: 4px 0 10px !important;
+    }
+    table.cards td.drink-photo-cell::before { content: none; }
+    .drink-photo {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      aspect-ratio: 8 / 5;
+      object-fit: cover;
+      border-radius: 8px;
+      background: #efe6da;
+    }
     #overview p.topic-card b { display: block; margin-bottom: 4px; }
     .to-top {
       margin: 28px 0 0;
@@ -620,6 +634,41 @@
           }
         });
       });
+    });
+    const drinkPhotos = {
+      "Espresso": "images/espresso.jpg",
+      "Doppio": "images/doppio.jpg",
+      "Ristretto": "images/ristretto.jpg",
+      "Lungo": "images/lungo.jpg",
+      "Americano (Long Black)": "images/americano.jpg",
+      "Drip/Filter Coffee": "images/drip.jpg",
+      "Cappuccino": "images/cappuccino.jpg",
+      "Latte": "images/latte.jpg",
+      "Flat White": "images/flat-white.jpg",
+      "Macchiato": "images/macchiato.jpg",
+      "Cortado": "images/cortado.jpg",
+      "Mocha": "images/mocha.jpg",
+      "Piccolo Latte": "images/piccolo.jpg",
+      "Iced Coffee": "images/iced.jpg",
+      "Cold Brew": "images/cold-brew.jpg",
+      "Nitro Cold Brew": "images/nitro.jpg"
+    };
+    document.querySelectorAll("#types table.cards tbody tr").forEach((tr) => {
+      const name = (tr.children[0] && tr.children[0].textContent || "").replace(/\s+/g, " ").trim();
+      const src = drinkPhotos[name];
+      if (!src) return;
+      const td = document.createElement("td");
+      td.className = "drink-photo-cell";
+      const img = document.createElement("img");
+      img.className = "drink-photo";
+      img.src = src;
+      img.alt = name;
+      img.width = 800;
+      img.height = 500;
+      img.loading = "lazy";
+      img.decoding = "async";
+      td.appendChild(img);
+      tr.children[0].after(td);
     });
     function addToTop(target, before, extraClass) {
       const p = document.createElement("p");
