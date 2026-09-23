@@ -599,14 +599,15 @@
     </footer>
   </div>
   <script>
-    // Optional extra footer line from a URL word.
+    // 23 Sept 2026
+	// Optional extra footer line from a URL word.
     // Works with:
     //   https://mfread.github.io/about-coffee/mandalay
     //   https://mfread.github.io/about-coffee/?by=mandalay
     // Add a new entry in FOOTER_BY when you introduce another word.
     const FOOTER_BY = {
-      mandalay: "This app was brought to you by the Mandalay Clubhouse",
-      toca: "This app was brought to you by the Tesla Owners Club of Australia (TOCA)",
+      mandalay: "This info was brought to you by the <b>Mandalay Clubhouse</b>",
+      toca: "This info was brought to you by the <b>Tesla Owners Club of Australia</b> (TOCA)",
     };
     function footerKeyFromUrl() {
       const params = new URLSearchParams(location.search);
