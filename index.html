@@ -606,9 +606,9 @@
     //   https://mfread.github.io/about-coffee/?by=mandalay
     // Add a new entry in FOOTER_BY when you introduce another word.
     const FOOTER_BY = {
-      mandalay: "This info was brought to you by the Mandalay Clubhouse",
-      toca: "This info was brought to you by the Tesla Owners Club of Australia (TOCA)",
-      oneway: "This info was brought to you by the Oneway Lebanese Bakery"
+      mandalay: "This info was brought to you by the <b>Mandalay Clubhouse</b>",
+      toca: "This info was brought to you by the <b>Tesla Owners Club of Australia</b> (TOCA)",
+      oneway: "This info was brought to you by the <b>Oneway Lebanese Bakery</b>"
     };
     function footerKeyFromUrl() {
       const params = new URLSearchParams(location.search);
@@ -624,10 +624,12 @@
       if (!el) return;
       const msg = FOOTER_BY[footerKeyFromUrl()];
       if (msg) {
-        el.textContent = msg;
+        //el.textContent = msg;
+		el.innerHTML = msg;
         el.hidden = false;
       } else {
-        el.textContent = "";
+        //el.textContent = "";
+		el.innerHTML = "";
         el.hidden = true;
       }
     }
