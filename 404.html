@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About Coffee</title>
+  <script>
+    (function () {
+      var base = "/about-coffee/";
+      var path = location.pathname || "";
+      var extra = path;
+      if (path.indexOf(base) === 0) extra = path.slice(base.length);
+      extra = extra.replace(/^\/+|\/+$/g, "").split("/")[0] || "";
+      extra = extra.replace(/index\.html$/i, "");
+      var hash = location.hash || "#overview";
+      var dest = base;
+      if (extra) dest += "?by=" + encodeURIComponent(extra.toLowerCase());
+      dest += hash;
+      location.replace(dest);
+    })();
+  </script>
+</head>
+<body>
+  <p>Redirecting…</p>
+</body>
+</html>
