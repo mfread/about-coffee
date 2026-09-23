@@ -204,6 +204,12 @@
     .to-top button:hover,
     .to-top button:focus { background: #f7efe6; }
     footer { text-align: center; color: #8a8a8a; font-size: 0.82rem; margin-top: 28px; }
+    #footer-by {
+      margin-top: 10px;
+      color: #00a0e3;
+      font-weight: 700;
+      font-size: 0.92rem;
+    }
     #questions table.cards td { padding-left: 0; padding-right: 0; }
     #overview .to-top,
     #questions .to-top,
@@ -586,9 +592,45 @@
 </table>
       </section>
     </div>
-    <footer>Copyright Mark Read 2025<br>Melbourne, Australia</footer>
+    <footer>
+      Copyright Mark Read 2025<br>
+      Melbourne, Australia
+      <div id="footer-by" hidden></div>
+    </footer>
   </div>
   <script>
+    // Optional extra footer line from a URL word.
+    // Works with:
+    //   https://mfread.github.io/about-coffee/mandalay
+    //   https://mfread.github.io/about-coffee/?by=mandalay
+    // Add a new entry in FOOTER_BY when you introduce another word.
+    const FOOTER_BY = {
+      mandalay: "This app was brought to you by the Mandalay Clubhouse",
+      toca: "This app was brought to you by the Tesla Owners Club of Australia (TOCA)",
+    };
+    function footerKeyFromUrl() {
+      const params = new URLSearchParams(location.search);
+      const q = (params.get("by") || "").toLowerCase().trim();
+      if (q) return q;
+      const parts = location.pathname.replace(/\/+$/, "").split("/").filter(Boolean);
+      const skip = new Set(["about-coffee", "index.html"]);
+      const extra = parts.filter((p) => !skip.has(p.toLowerCase()));
+      return extra.length ? extra[extra.length - 1].toLowerCase() : "";
+    }
+    function applyFooterBy() {
+      const el = document.getElementById("footer-by");
+      if (!el) return;
+      const msg = FOOTER_BY[footerKeyFromUrl()];
+      if (msg) {
+        el.textContent = msg;
+        el.hidden = false;
+      } else {
+        el.textContent = "";
+        el.hidden = true;
+      }
+    }
+    applyFooterBy();
+
     const pages = ["overview", "questions", "types", "more"];
     const heading = document.getElementById("site-heading");
     const tag = document.getElementById("site-tag");
