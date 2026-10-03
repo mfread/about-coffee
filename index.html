@@ -33,7 +33,40 @@
       padding-right: max(12px, env(safe-area-inset-right));
       padding-bottom: max(48px, env(safe-area-inset-bottom));
     }
-    header.site { padding: 8px 4px 16px; }
+    header.site {
+      position: relative;
+      padding: 8px 108px 16px 4px;
+      min-height: 96px;
+    }
+    .sponsor {
+      position: absolute;
+      top: 2px;
+      right: 0;
+      width: 100px;
+      text-align: center;
+      line-height: 1.15;
+    }
+    .sponsor[hidden] { display: none !important; }
+    .sponsor .label {
+      margin: 0 0 2px;
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      color: var(--brown);
+    }
+    .sponsor img {
+      display: block;
+      width: 72px;
+      height: 72px;
+      margin: 0 auto;
+      object-fit: contain;
+    }
+    @media (max-width: 520px) {
+      header.site { padding-right: 78px; min-height: 78px; }
+      .sponsor { width: 72px; }
+      .sponsor .label { font-size: 0.52rem; }
+      .sponsor img { width: 52px; height: 52px; }
+    }
     header.site .kicker {
       font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase;
       color: var(--brown); font-weight: 700;
@@ -223,6 +256,10 @@
 <body>
   <div class="wrap">
     <header class="site">
+      <div id="sponsor" class="sponsor" hidden>
+        <div class="label" id="sponsor-label"></div>
+        <img id="sponsor-logo" alt="" />
+      </div>
       <div class="kicker">About Coffee</div>
       <h1 id="site-heading">Coffee Overview</h1>
       <p class="tag" id="site-tag">A brief look at coffee in all its sensory splendor :)</p>
@@ -634,6 +671,26 @@
       }
     }
     applyFooterBy();
+
+    // Top-right sponsor mark. Shown only when the URL word exists in FOOTER_BY.
+    // Logo file is logos/<word>.png (same word as the URL, lower case).
+    function applySponsor() {
+      const box = document.getElementById("sponsor");
+      const img = document.getElementById("sponsor-logo");
+      const label = document.getElementById("sponsor-label");
+      if (!box) return;
+      const key = footerKeyFromUrl();
+      if (!key || !FOOTER_BY[key]) {
+        box.hidden = true;
+        return;
+      }
+      label.textContent = "Sponsored by " + key.toUpperCase();
+      img.alt = key.toUpperCase() + " logo";
+      img.onerror = () => { box.hidden = true; };
+      img.src = "logos/" + key + ".png";
+      box.hidden = false;
+    }
+    applySponsor();
 
     const pages = ["overview", "questions", "types", "more"];
     const heading = document.getElementById("site-heading");
